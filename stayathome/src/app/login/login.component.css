@@ -1,0 +1,116 @@
+.lg-head{
+    width: 100%;
+}
+
+.lg-head .lg-top{
+    width: 100%;
+    height: 0.9rem;
+    line-height: .9rem;
+}
+.lg-head .mui-icon-back{
+    color: #333;
+    margin-left: 0.05rem;
+}
+.lg-head img{
+    width: 100%;
+    height: 3.9rem
+}
+
+
+.lg-content{
+    width: 90%;
+    margin: 0.2rem auto;
+}
+
+.mui-input-row label {
+    font-family: 'Helvetica Neue',Helvetica,sans-serif;
+    line-height: 1.1;
+    float: left;
+    width: 10%;
+}
+
+.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea {
+    float: right;
+    width: 80%;
+    margin-bottom: 0;
+    padding-left: 0;
+    border: 0;
+}
+
+.mui-input-group .mui-input-row {
+    height: 0.9rem;
+    line-height: 0.9rem;
+}
+input[type=password],input[type=text]{
+    height: 0.9rem;
+}
+
+.mui-input-group .mui-input-row  .lg-code{
+    position: absolute;
+    top:0;
+    right: 0.2rem;
+    font-size: 0.26rem;
+}
+
+.mui-input-group:after
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 0;
+
+    content: '';
+    -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+
+    background-color: #fff;
+}
+.mui-input-group:before
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 0;
+
+    content: '';
+    -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+
+    background-color: #fff;
+}
+
+.lg-content .mui-input-group .mui-input-row .mui-icon{
+    font-size: .5rem;
+}
+
+.lg-content .mui-input-group .mui-button-row .mui-btn{
+    width: 90%;
+    height: .8rem;
+    border-radius: .8rem;
+    margin: .3rem 0;
+    background-color:#fc5c69;
+    font-size: .3rem;
+}
+.col{
+    color:#fc5c69;
+}
+
+
+.other-contact{
+    width: 100%;
+    overflow: hidden;
+}
+
+.other-content{
+    width: 100%;
+    margin-top: .8rem;
+    text-align: center;
+}
+
+.other-cont-2{
+    
+}

@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { EatComponent } from './eat/eat.component';
 import { FindComponent } from './find/find.component';
 import { MyComponent } from './my/my.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"layout",pathMatch:'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
       {path:"find",component:FindComponent},
       {path:"my",component:MyComponent}
   ]
-}
+},
+{path:"login",component:LoginComponent}
 ];
 
 @NgModule({
