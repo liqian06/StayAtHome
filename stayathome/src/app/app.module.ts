@@ -11,6 +11,7 @@ import { EatComponent } from './eat/eat.component';
 import { FindComponent } from './find/find.component';
 import { MyComponent } from './my/my.component';
 import { LayoutComponent } from './layout/layout.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { LayoutComponent } from './layout/layout.component';
     EatComponent,
     FindComponent,
     MyComponent,
-    LayoutComponent
+    LayoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

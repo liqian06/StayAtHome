@@ -1,6 +1,37 @@
-<p>
-  home works!
-</p>
-<a [routerLink]="['/layout/eat']">
-  发现
-</a>
+<!-- 页面头部logo -->
+<div class="headTitle">
+	<img [src]="homeLogoImg" alt="">
+</div>
+<!-- 页面主题部分 -->
+<div class="content">
+	<!-- 今日推荐 + 轮播图 -->
+	<div class="today">
+		<!-- 标题 -->
+		<div class="title clearfix">
+			<div class="title1"></div>
+			<div class="title2"></div>
+			<div class="title3">今日推荐</div>
+			<div class="title2"></div>
+			<div class="title1"></div> 
+		</div>
+		<!-- 轮播 -->
+		<div class="mui-slider banner">
+			<div class="mui-slider-group mui-slider-loop">
+				<!--支持循环，需要重复图片节点-->
+				<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../../assets/img/pic4.jpg" /></a></div>
+				<div class="mui-slider-item"><a href="#"><img src="../../assets/img/pic1.jpg" /></a></div>
+				<div class="mui-slider-item"><a href="#"><img src="../../assets/img/pic2.jpg" /></a></div>
+				<div class="mui-slider-item"><a href="#"><img src="../../assets/img/pic3.jpg" /></a></div>
+				<div class="mui-slider-item"><a href="#"><img src="../../assets/img/pic4.jpg" /></a></div>
+				<!--支持循环，需要重复图片节点-->
+				<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../../assets/img/pic1.jpg" /></a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 线 -->
+	<div class="hr"></div>
+
+	<!-- 吃喝玩乐 滑动字 -->
+	<h1 id="slideFont"></h1>
+</div>
