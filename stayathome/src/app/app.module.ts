@@ -11,11 +11,8 @@ import { EatComponent } from './eat/eat.component';
 import { FindComponent } from './find/find.component';
 import { MyComponent } from './my/my.component';
 import { LayoutComponent } from './layout/layout.component';
-<<<<<<< HEAD
 import { HomeService } from './service/home.service';
-=======
 import { LoginComponent } from './login/login.component';
->>>>>>> 2913614abef4cc7834aed70905c9a396fd87b63f
 
 
 @NgModule({

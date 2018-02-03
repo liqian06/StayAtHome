@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewChecked} from '@angular/core';
 import { Observable } from 'rxjs';
 import { Banner, HomeService } from '../service/home.service';
-import * as mui from "../../assets/js/mui.js";
+// import * as mui from "../../assets/js/mui.js";
 
 @Component({
   selector: 'app-home',
@@ -26,13 +26,13 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
 
     this.homeService.getBanner().subscribe(data=>this.banners = data);
 
-    this.timer1 = setTimeout(function(){
-      // clearInterval(this.timer1)
-      var gallery = mui('#slider');
-      gallery.slider({
-        interval:0//自动轮播周期，若为0则不自动播放，默认为0；
-      });
-    },300)
+    // this.timer1 = setTimeout(function(){
+    //   // clearInterval(this.timer1)
+    //   var gallery = mui('#slider');
+    //   gallery.slider({
+    //     interval:0//自动轮播周期，若为0则不自动播放，默认为0；
+    //   });
+    // },300)
 
     
   }
