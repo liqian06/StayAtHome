@@ -24,7 +24,7 @@
 
 div.mui-content{background-color: #F1E9DC;}
 .mui-fullscreen{
-    top:1rem;
+    top:0.8rem;
 }
 p{margin-bottom: 0px;}
 .mui-slider-indicator.mui-segmented-control{
@@ -35,18 +35,31 @@ p{margin-bottom: 0px;}
     height: 45px;
 }
 .mui-segmented-control.mui-scroll-wrapper .mui-control-item{
-    width: 100px;
-    border: 1px solid #ccc;
-    box-shadow:0 0 5px #aaa;
-    line-height: 30px;
+    line-height: 38px;
 }
-.mui-segmented-control.mui-scroll-wrapper .mui-control-item.mui-active{
-    color: #000;
-    /* background-color: #78909C; */
-}
+
 .mui-fullscreen .mui-segmented-control~.mui-slider-group{
     top: 45px;
 }
-.mui-slider-group .mui-scroll-wrapper{
-    padding-top: 5px;
+
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+    color: #000;
+    border-bottom: 2px solid #ff4840;
+}
+
+
+.mui-media-body{
+    height: 1.48rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mui-table-view .mui-media-object{
+    height: 1.48rem;
+    max-width: 3.08rem;
+}
+
+h5{
+    color: #000;
 }
