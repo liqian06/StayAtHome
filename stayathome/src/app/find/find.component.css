@@ -1,0 +1,28 @@
+
+.mui-table-view-cell{
+    display: flex;
+}
+.mui-input-row{
+    width: 88%;
+}
+.mui-table-view-cell>.mui-badge{
+    top:40%;
+    right:0.1rem;
+}
+.mui-badge-primary{
+    background-color: #fff;
+    color: #fe4f48;
+    font-size: 32px;
+}
+.mui-search input[type=search]{
+    border-radius:99px;
+    height: 0.44rem;
+    margin-bottom: 0;
+}
+.mui-table-view:after{
+    height: 0;
+}
+.mui-search .mui-placeholder{
+    height: 0.44rem;
+    line-height: 0.44rem;
+}
