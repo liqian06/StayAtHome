@@ -11,6 +11,7 @@ import { EatComponent } from './eat/eat.component';
 import { FindComponent } from './find/find.component';
 import { MyComponent } from './my/my.component';
 import { LayoutComponent } from './layout/layout.component';
+import { HomeService } from './service/home.service';
 
 
 @NgModule({
@@ -30,7 +31,9 @@ import { LayoutComponent } from './layout/layout.component';
     HttpModule
 
   ],
-  providers: [],
+  providers: [
+    HomeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

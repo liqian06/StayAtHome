@@ -12,19 +12,28 @@
 			<div class="title2"></div>
 			<div class="title3">今日推荐</div>
 			<div class="title2"></div>
-			<div class="title1"></div> 
+			<div class="title1"></div>
 		</div>
 		<!-- 轮播 -->
-		<div class="mui-slider banner">
+		<div id="slider" class="mui-slider banner">
 			<div class="mui-slider-group mui-slider-loop">
 				<!--支持循环，需要重复图片节点-->
-				<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../../assets/img/pic4.jpg" /></a></div>
-				<div class="mui-slider-item"><a href="#"><img src="../../assets/img/pic1.jpg" /></a></div>
-				<div class="mui-slider-item"><a href="#"><img src="../../assets/img/pic2.jpg" /></a></div>
-				<div class="mui-slider-item"><a href="#"><img src="../../assets/img/pic3.jpg" /></a></div>
-				<div class="mui-slider-item"><a href="#"><img src="../../assets/img/pic4.jpg" /></a></div>
+				<!-- <div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img [src]="banners[4].ad_pic_links" />
+					</a>
+				</div> -->
+				<div class="mui-slider-item" *ngFor="let ban of banners">
+					<a href="#">
+						<img [src]="ban.ad_pic_links" />
+					</a>
+				</div>
 				<!--支持循环，需要重复图片节点-->
-				<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../../assets/img/pic1.jpg" /></a></div>
+				<!-- <div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img [src]="banners[0].ad_pic_links" />
+					</a>
+				</div> -->
 			</div>
 		</div>
 	</div>

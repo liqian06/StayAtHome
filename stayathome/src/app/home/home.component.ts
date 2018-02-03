@@ -1,34 +1,64 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked} from '@angular/core';
+import { Observable } from 'rxjs';
+import { Banner, HomeService } from '../service/home.service';
+import * as mui from "../../assets/js/mui.js";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit ,AfterViewChecked{
 
-  private homeLogoImg:string = "../../assets/img/home-logo.png";
+  private homeLogoImg:string = "http://39.106.207.39/img/home-logo.png";
   private arr:string[] = ["吃","喝","玩","乐","·","要","啥","有","啥"];
   private newArr:string = "";  
-  private slideI:number = 0;     
+  private slideI:number = 0;   
+  
+  private banners:Banner[];
 
-  constructor() { }
+  private timer1;
+  private timer2;
+
+  constructor(private homeService:HomeService) { }
 
   ngOnInit() {
-    setInterval(()=>{
-        if(this.slideI < this.arr.length){
+
+    this.homeService.getBanner().subscribe(data=>this.banners = data);
+
+    this.timer1 = setTimeout(function(){
+      // clearInterval(this.timer1)
+      var gallery = mui('#slider');
+      gallery.slider({
+        interval:0//自动轮播周期，若为0则不自动播放，默认为0；
+      });
+    },300)
+
+    
+  }
+
+  ngAfterViewChecked(){
+    console.log(this.slideI)
+    if(document.getElementById("slideFont")){
+      clearInterval(this.timer2)
+      this.setTime();
+    }
+  }
+
+  setTime(){
+    this.timer2=setInterval(()=>{
+      clearInterval(this.timer2);
+      if(document.getElementById("slideFont")){
+        if(this.newArr.length < this.arr.length){
             this.newArr += this.arr[this.slideI];
-            document.getElementById("slideFont").innerHTML = "[" + this.newArr + "]";
+            document.getElementById("slideFont").innerText = "[ " + this.newArr + " ]";
             this.slideI++;
         }else{
             this.slideI = 0;
             this.newArr = "";
         }
+      }
     },400)
   }
-
-
-
-  
 
 }

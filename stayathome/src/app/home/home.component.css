@@ -8,6 +8,7 @@
     position: fixed;
     top: 0;
     z-index: 999;
+    background: white;
 }
 
 .headTitle img{
@@ -41,7 +42,7 @@
 /* 内容部分样式 */
 .content{
     margin-top: 0.9rem;
-    padding: 0 0.3rem;
+    padding: 0 0.3rem 1rem;
 }
 
 /* 今日推荐 */
