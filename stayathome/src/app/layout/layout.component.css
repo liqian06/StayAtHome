@@ -1,5 +1,8 @@
 .mui-bar.mui-bar-tab{
     background-color: #f9f9f9;
+    height: 0.82rem;
+    -webkit-box-shadow:none;
+    box-shadow: none;
 }
 .mui-bar-tab .mui-tab-item.mui-active{
     color: #ff524c;

@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+	/*7.5为设计稿的宽度*/
+	font-size: -webkit-calc(100vw/6.4);
+	/*此时定义了在750的设计稿下  1rem=100px*/
+}
+
+body{
+	font-size: 0.24rem;
+}
+
+.clearfix:after{
+	content:".";
+	clear:both;
+	display:block;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
