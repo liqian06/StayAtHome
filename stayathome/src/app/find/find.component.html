@@ -1,12 +1,10 @@
-
-
 <ul class="mui-table-view">
-  <li class="mui-table-view-cell">
-      <div class="mui-input-row mui-search">
-        <input type="search" class="mui-input-clear" placeholder="">
-      </div>
-      <span class="mui-badge mui-badge-primary mui-icon mui-icon-camera"></span>
-  </li>
+    <li class="mui-table-view-cell">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+        <span class="mui-badge mui-badge-primary mui-icon mui-icon-camera"></span>
+    </li>
 </ul>
 
 <div class="mui-content">
@@ -27,30 +25,21 @@
                 <div class="mui-scroll-wrapper">
                     <div class="mui-scroll">
                         <ul class="mui-table-view">
-                            <li class="mui-table-view-cell mui-media">
+                            <li class="mui-table-view-cell mui-media" *ngFor="let datas of dataList?.list[0]?.data">
                                 <a href="javascript:;">
-                                    <img class="mui-media-object mui-pull-right" src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
+                                    <img class="mui-media-object mui-pull-right" [src]="datas.cover">
                                     <div class="mui-media-body">
-                                        <h5 class='mui-ellipsis'>用影响记录生活</h5> 
-                                        <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="mui-table-view-cell mui-media">
-                                <a href="javascript:;">
-                                    <img class="mui-media-object mui-pull-right" src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
-                                    <div class="mui-media-body">
-                                        木屋
-                                        <p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="mui-table-view-cell mui-media">
-                                <a href="javascript:;">
-                                    <img class="mui-media-object mui-pull-right" src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
-                                    <div class="mui-media-body">
-                                        CBD
-                                        <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+                                        <h5 class='mui-ellipsis-2'>{{datas.title}}</h5>
+                                        <div class="find-praise">
+                                            <div class="find-praise-one">
+                                                <span class="mui-icon mui-icon-person"></span>
+                                                <span>{{datas.member.data.member_name}}</span>
+                                            </div>
+                                            <div class="find-praise-two">
+                                                <span class="mui-icon mui-icon-star"></span>
+                                                <span>{{datas.praise_count}}</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </a>
                             </li>
@@ -61,88 +50,245 @@
             <div class="mui-slider-item mui-control-content">
                 <div class="mui-scroll-wrapper">
                     <div class="mui-scroll">
-                        <ul class="mui-table-view mui-grid-view">
-                            <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                                <a href="#">
-                                    <img class="mui-media-object" src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
-                                    <div class="mui-media-body">幸福就是可以一起睡觉</div>
-                                </a>
-                            </li>
-                            <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                                <a href="#">
-                                    <img class="mui-media-object" src="http://www.dcloud.io/hellomui/images/muwu.jpg">
-                                    <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div>
-                                </a>
-                            </li>
-                            <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                                <a href="#"><img class="mui-media-object" src="http://www.dcloud.io/hellomui/images/cbd.jpg">
-                                    <div class="mui-media-body">Color of SIP CBD</div>
-                                </a>
-                            </li>
-                            <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                                <a href="#">
-                                    <img class="mui-media-object" src="http://www.dcloud.io/hellomui/images/yuantiao.jpg">
-                                    <div class="mui-media-body">静静看这世界</div>
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-media" *ngFor="let datas of dataList?.list[1]?.data">
+                                <a href="javascript:;">
+                                    <img class="mui-media-object mui-pull-right" [src]="datas.cover">
+                                    <div class="mui-media-body">
+                                        <h5 class='mui-ellipsis-2'>{{datas.title}}</h5>
+                                        <div class="find-praise">
+                                            <div class="find-praise-one">
+                                                <span class="mui-icon mui-icon-person"></span>
+                                                <span>{{datas.member.data.member_name}}</span>
+                                            </div>
+                                            <div class="find-praise-two">
+                                                <span class="mui-icon mui-icon-star"></span>
+                                                <span>{{datas.praise_count}}</span>
+                                                <span>{{dataIndex}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
-                        <div class="mui-card">
-                            <div class="mui-card-header">页眉</div>
-                            <div class="mui-card-content">
-                                <div class="mui-card-content-inner">
-                                    包含页眉页脚的卡片，页眉常用来显示面板标题，页脚用来显示额外信息或支持的操作（比如点赞、评论等）
-                                </div>
-                            </div>
-                            <div class="mui-card-footer">页脚</div>
-                        </div>
-                        <div class="mui-card">
-                            <div class="mui-card-header mui-card-media">
-                                <img src="http://www.dcloud.io/hellomui/images/logo.png" style="width:34px">
-                                <div class="mui-media-body">
-                                    小M
-                                    <p>发表于 2016-06-30 15:30</p>
-                                </div>
-                            </div>
-                            <div class="mui-card-content" >
-                                <img src="http://www.dcloud.io/hellomui/images/yuantiao.jpg" alt="" width="100%"/>
-                            </div>
-                            <div class="mui-card-footer">
-                                <a class="mui-card-link">Like</a>
-                                <a class="mui-card-link">Comment</a>
-                                <a class="mui-card-link">Read more</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="mui-slider-item mui-control-content">
                 <div class="mui-scroll-wrapper">
                     <div class="mui-scroll">
-                        自行脑补页面
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-media" *ngFor="let datas of dataList?.list[0]?.data">
+                                <a href="javascript:;">
+                                    <img class="mui-media-object mui-pull-right" [src]="datas.cover">
+                                    <div class="mui-media-body">
+                                        <h5 class='mui-ellipsis-2'>{{datas.title}}</h5>
+                                        <div class="find-praise">
+                                            <div class="find-praise-one">
+                                                <span class="mui-icon mui-icon-person"></span>
+                                                <span>{{datas.member.data.member_name}}</span>
+                                            </div>
+                                            <div class="find-praise-two">
+                                                <span class="mui-icon mui-icon-star"></span>
+                                                <span>{{datas.praise_count}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="mui-slider-item mui-control-content">
                 <div class="mui-scroll-wrapper">
                     <div class="mui-scroll">
-                        自行脑补页面
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-media" *ngFor="let datas of dataList?.list[1]?.data">
+                                <a href="javascript:;">
+                                    <img class="mui-media-object mui-pull-right" [src]="datas.cover">
+                                    <div class="mui-media-body">
+                                        <h5 class='mui-ellipsis-2'>{{datas.title}}</h5>
+                                        <div class="find-praise">
+                                            <div class="find-praise-one">
+                                                <span class="mui-icon mui-icon-person"></span>
+                                                <span>{{datas.member.data.member_name}}</span>
+                                            </div>
+                                            <div class="find-praise-two">
+                                                <span class="mui-icon mui-icon-star"></span>
+                                                <span>{{datas.praise_count}}</span>
+                                                <span>{{dataIndex}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="mui-slider-item mui-control-content">
                 <div class="mui-scroll-wrapper">
                     <div class="mui-scroll">
-                        自行脑补页面
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-media" *ngFor="let datas of dataList?.list[0]?.data">
+                                <a href="javascript:;">
+                                    <img class="mui-media-object mui-pull-right" [src]="datas.cover">
+                                    <div class="mui-media-body">
+                                        <h5 class='mui-ellipsis-2'>{{datas.title}}</h5>
+                                        <div class="find-praise">
+                                            <div class="find-praise-one">
+                                                <span class="mui-icon mui-icon-person"></span>
+                                                <span>{{datas.member.data.member_name}}</span>
+                                            </div>
+                                            <div class="find-praise-two">
+                                                <span class="mui-icon mui-icon-star"></span>
+                                                <span>{{datas.praise_count}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="mui-slider-item mui-control-content">
                 <div class="mui-scroll-wrapper">
                     <div class="mui-scroll">
-                        自行脑补页面
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-media" *ngFor="let datas of dataList?.list[1]?.data">
+                                <a href="javascript:;">
+                                    <img class="mui-media-object mui-pull-right" [src]="datas.cover">
+                                    <div class="mui-media-body">
+                                        <h5 class='mui-ellipsis-2'>{{datas.title}}</h5>
+                                        <div class="find-praise">
+                                            <div class="find-praise-one">
+                                                <span class="mui-icon mui-icon-person"></span>
+                                                <span>{{datas.member.data.member_name}}</span>
+                                            </div>
+                                            <div class="find-praise-two">
+                                                <span class="mui-icon mui-icon-star"></span>
+                                                <span>{{datas.praise_count}}</span>
+                                                <span>{{dataIndex}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mui-slider-item mui-control-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell mui-media" *ngFor="let datas of dataList?.list[0]?.data">
+                                <a href="javascript:;">
+                                    <img class="mui-media-object mui-pull-right" [src]="datas.cover">
+                                    <div class="mui-media-body">
+                                        <h5 class='mui-ellipsis-2'>{{datas.title}}</h5>
+                                        <div class="find-praise">
+                                            <div class="find-praise-one">
+                                                <span class="mui-icon mui-icon-person"></span>
+                                                <span>{{datas.member.data.member_name}}</span>
+                                            </div>
+                                            <div class="find-praise-two">
+                                                <span class="mui-icon mui-icon-star"></span>
+                                                <span>{{datas.praise_count}}</span>
+                                                <span>{{dataIndex}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- <div class="mui-slider-group">
+                <div class="mui-slider-item mui-control-content mui-active">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            <div class="mui-card">
+                                <div class="mui-card-content">
+                                    <div class="mui-card-content-inner">
+                                        这是一个最简单的卡片视图控件；卡片视图常用来显示完整独立的一段信息，比如一篇文章的预览图、作者信息、点赞数量等
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mui-card">
+                                <div class="mui-card-header">页眉</div>
+                                <div class="mui-card-content">
+                                    <div class="mui-card-content-inner">
+                                        包含页眉页脚的卡片，页眉常用来显示面板标题，页脚用来显示额外信息或支持的操作（比如点赞、评论等）
+                                    </div>
+                                </div>
+                                <div class="mui-card-footer">页脚</div>
+                            </div>
+                            <div class="mui-card">
+                                <div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(http://www.dcloud.io/hellomui/images/cbd.jpg)"></div>
+                                <div class="mui-card-content">
+                                    <div class="mui-card-content-inner">
+                                        <p>Posted on January 18, 2016</p>
+                                        <p style="color: #333;">这里显示文章摘要，让读者对文章内容有个粗略的概念...</p>
+                                    </div>
+                                </div>
+                                <div class="mui-card-footer">
+                                    <a class="mui-card-link">Like</a>
+                                    <a class="mui-card-link">Read more</a>
+                                </div>
+                            </div>
+                            <div class="mui-card">
+                                <div class="mui-card-header mui-card-media">
+                                    <img src="http://www.dcloud.io/hellomui/images/logo.png" style="width:34px">
+                                    <div class="mui-media-body">
+                                        小M
+                                        <p>发表于 2016-06-30 15:30</p>
+                                    </div>
+                                </div>
+                                <div class="mui-card-content" >
+                                    <img src="http://www.dcloud.io/hellomui/images/yuantiao.jpg" alt="" width="100%"/>
+                                </div>
+                                <div class="mui-card-footer">
+                                    <a class="mui-card-link">Like</a>
+                                    <a class="mui-card-link">Comment</a>
+                                    <a class="mui-card-link">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            自行脑补页面
+                        </div>
+                    </div>
+                </div>
+                <div class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            自行脑补页面
+                        </div>
+                    </div>
+                </div>
+                <div class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            自行脑补页面
+                        </div>
+                    </div>
+                </div>
+                <div class="mui-slider-item mui-control-content">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            自行脑补页面
+                        </div>
+                    </div>
+                </div>
+        </div> -->
     </div>
 </div>

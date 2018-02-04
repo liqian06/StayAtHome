@@ -3,6 +3,7 @@
     height: 0.82rem;
     -webkit-box-shadow:none;
     box-shadow: none;
+    width: 100%;
 }
 .mui-bar-tab .mui-tab-item.mui-active{
     color: #ff524c;

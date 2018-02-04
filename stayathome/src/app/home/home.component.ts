@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
   private newArr:string = "";  
   private slideI:number = 0;   
   
-  private banners:Banner[];
+  private banners:Banner[]
 
   private timer1;
   private timer2;
