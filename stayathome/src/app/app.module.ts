@@ -13,6 +13,7 @@ import { MyComponent } from './my/my.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeService } from './service/home.service';
 import { LoginComponent } from './login/login.component';
+import { FindService } from './service/find.service';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { LoginComponent } from './login/login.component';
 
   ],
   providers: [
-    HomeService
+    HomeService,
+    FindService
   ],
   bootstrap: [AppComponent]
 })
