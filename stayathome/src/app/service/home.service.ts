@@ -13,6 +13,16 @@ export class HomeService {
       .map(res=>res.json())
   }
 
+  getHomeList1():Observable<HomeList1[]>{
+    return this.http.get("http://39.106.207.39:3000/homesec")
+      .map(res=>res.json())
+  }
+
+  getHomeList2():Observable<HomeList2[]>{
+    return this.http.get("http://39.106.207.39:3000/homefirst")
+      .map(res=>res.json())
+  }
+
 }
 
 export class Banner{
@@ -25,6 +35,22 @@ export class Banner{
     public ad_sort:number,
     public describe:string,
     public click
+  ){
+
+  }
+}
+
+export class HomeList1{
+  constructor(
+   
+  ){
+
+  }
+}
+
+export class HomeList2{
+  constructor(
+   
   ){
 
   }

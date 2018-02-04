@@ -26,7 +26,10 @@
 				<div class="mui-slider-item" *ngFor="let ban of banners">
 					<a href="#">
 						<img [src]="ban.ad_pic_links" />
+						
 					</a>
+					<p class="banner-p1">{{ban.ad_name}}</p>
+					<p class="banner-p2">{{ban.describe}}</p>
 				</div>
 				<!--支持循环，需要重复图片节点-->
 				<!-- <div class="mui-slider-item mui-slider-item-duplicate">
@@ -43,4 +46,90 @@
 
 	<!-- 吃喝玩乐 滑动字 -->
 	<h1 id="slideFont"></h1>
+
+	<!-- 吃喝玩乐 nav导航 -->
+	<div class="nav clearfix">
+			<ul class="clearfix" >
+				<li *ngFor="let nav of homeList1[0].store_class">
+					<img [src]="nav.CateImageUrl" alt="">
+					<p>{{nav.cate_name}}</p>
+				</li>
+			</ul>
+	</div>
+
+	<!-- 允典头条 -->
+	<div class="headLine clearfix">
+		<div class="headLine-left">
+			<p>允典</p>
+			<p>头条</p>
+		</div>
+		<div class="headLine-right">周末 | 吃喝玩乐，来这里就一个字：爽</div>
+	</div>
+
+	<!-- 热门话题 -->
+	<div class="hotTopic clearfix">
+		<!-- 标题 -->
+		<div class="title clearfix">
+			<div class="title1"></div>
+			<div class="title2"></div>
+			<div class="title3">热门话题</div>
+			<div class="title2"></div>
+			<div class="title1"></div>
+		</div>
+		<div class="hotTopic-img font-parent" *ngFor="let hot of homeList1[2].hotTopic">
+			<img [src]="hot.tag_icon" alt="">
+			<span class="font"># {{hot.tag_name}} #</span>
+		</div>
+	</div>
+
+	<!-- 民俗风味 -->
+	<div class="custom">
+		<!-- 标题 -->
+		<div class="title clearfix">
+			<div class="title1"></div>
+			<div class="title2"></div>
+			<div class="title3">民俗风味</div>
+			<div class="title2"></div>
+			<div class="title1"></div>
+		</div>
+		<div class="custom-img font-parent">
+			<img class="img" [src]="homeList2[0].custom.stores.store_label" alt="">
+			<!-- <span class="font span">{{homeList2[0].custom.cate_desc}}</span> -->
+		</div>
+	</div>
+
+	<!-- 商务宴会 -->
+	<div class="business">
+		<!-- 标题 -->
+		<div class="title clearfix">
+			<div class="title1"></div>
+			<div class="title2"></div>
+			<div class="title3">商务宴会</div>
+			<div class="title2"></div>
+			<div class="title1"></div>
+		</div>
+		<div class="business-img font-parent">
+			<img class="img" [src]="homeList2[1].business.stores.store_label" alt="">
+		</div>
+	</div>
+
+	<!-- 优选品牌 -->
+	<div class="brand">
+		<!-- 标题 -->
+		<div class="title clearfix">
+			<div class="title1"></div>
+			<div class="title2"></div>
+			<div class="title3">优选品牌</div>
+			<div class="title2"></div>
+			<div class="title1"></div>
+		</div>
+		<div class="brand-list">
+			<ul class="clearfix">
+				<li *ngFor="let brand of homeList2[2].Brand.stores">
+					<img [src]="brand.store_label" alt="">
+					<p>{{brand.store_name}}</p>
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>

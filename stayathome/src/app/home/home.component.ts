@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewChecked} from '@angular/core';
 import { Observable } from 'rxjs';
-import { Banner, HomeService } from '../service/home.service';
+import { Banner, HomeService, HomeList1, HomeList2 } from '../service/home.service';
 // import * as mui from "../../assets/js/mui.js";
 
 @Component({
@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
   private slideI:number = 0;   
   
   private banners:Banner[];
+  private homeList1:HomeList1[];
+  private homeList2:HomeList2[];
 
   private timer1;
   private timer2;
@@ -25,6 +27,10 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
   ngOnInit() {
 
     this.homeService.getBanner().subscribe(data=>this.banners = data);
+
+    this.homeService.getHomeList1().subscribe(data=>this.homeList1 = data);
+
+    this.homeService.getHomeList2().subscribe(data=>this.homeList2 = data);
 
     this.timer1 = setTimeout(function(){
       // clearInterval(this.timer1)
@@ -38,7 +44,6 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
   }
 
   ngAfterViewChecked(){
-    console.log(this.slideI)
     if(document.getElementById("slideFont")){
       clearInterval(this.timer2)
       this.setTime();
