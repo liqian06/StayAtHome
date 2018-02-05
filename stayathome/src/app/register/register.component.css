@@ -11,15 +11,11 @@
     color: #333;
     margin-left: 0.05rem;
 }
+
 .lg-head .lg-top .lg{
     margin-left: 2.4rem;
     line-height: .9rem;
     font-size: .3rem;
-}
-.lg-head .lg-top .reg{
-    margin-left: 2rem;
-    line-height: .9rem;
-    font-size: .26rem;
 }
 .lg-head img{
     width: 100%;

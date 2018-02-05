@@ -6,6 +6,7 @@ import { EatComponent } from './eat/eat.component';
 import { FindComponent } from './find/find.component';
 import { MyComponent } from './my/my.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"layout",pathMatch:'full'},
@@ -18,7 +19,9 @@ const routes: Routes = [
       {path:"my",component:MyComponent}
   ]
 },
-{path:"login",component:LoginComponent}
+{path:"login",component:LoginComponent},
+{path:"register",component:RegisterComponent}
+
 ];
 
 @NgModule({

@@ -1,9 +1,8 @@
 <div class="lg-head">
   <div class="lg-top">
-      <span class="mui-icon mui-icon-back" (click)="goback()"></span>
-      <span class="lg">登录</span>
-      <a class="reg col" [routerLink]="['/register']">注册</a>
-</div>
+    <span class="mui-icon mui-icon-back" (click)="goback()"></span>
+    <span class="lg">注册</span>
+  </div>
   <img src="http://39.106.207.39/img/login.png" alt="">
 </div>
 
@@ -12,7 +11,11 @@
         <div class="mui-input-row">
             <label><span class="mui-icon mui-icon-person col"></span></label>
             <input type="text" class="mui-input-clear" placeholder="手机号">
-           
+            <span class="lg-code col">获取验证码</span>
+        </div>
+        <div class="mui-input-row">
+            <label><span class="mui-icon mui-icon-locked col"></span></label>
+            <input type="password" class="mui-input-password" placeholder="输入验证码">
         </div>
         <div class="mui-input-row">
             <label><span class="mui-icon mui-icon-locked col"></span></label>
