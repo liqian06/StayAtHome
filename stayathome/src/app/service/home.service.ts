@@ -42,7 +42,7 @@ export class Banner{
 
 export class HomeList1{
   constructor(
-   
+    
   ){
 
   }
