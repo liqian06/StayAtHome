@@ -14,6 +14,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { HomeService } from './service/home.service';
 import { LoginComponent } from './login/login.component';
 import { FindService } from './service/find.service';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FindService } from './service/find.service';
     FindComponent,
     MyComponent,
     LayoutComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
