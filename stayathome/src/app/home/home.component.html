@@ -50,7 +50,7 @@
 	<!-- 吃喝玩乐 nav导航 -->
 	<div class="nav clearfix">
 			<ul class="clearfix" >
-				<li *ngFor="let nav of homeList1[0].store_class">
+				<li *ngFor="let nav of homeList1?.list[0]?.store_class">
 					<img [src]="nav.CateImageUrl" alt="">
 					<p>{{nav.cate_name}}</p>
 				</li>
@@ -76,7 +76,7 @@
 			<div class="title2"></div>
 			<div class="title1"></div>
 		</div>
-		<div class="hotTopic-img font-parent" *ngFor="let hot of homeList1[2].hotTopic">
+		<div class="hotTopic-img font-parent" *ngFor="let hot of homeList1?.list[2]?.hotTopic">
 			<img [src]="hot.tag_icon" alt="">
 			<span class="font"># {{hot.tag_name}} #</span>
 		</div>
@@ -93,7 +93,7 @@
 			<div class="title1"></div>
 		</div>
 		<div class="custom-img font-parent">
-			<img class="img" [src]="homeList2[0].custom.stores.store_label" alt="">
+			<img class="img" [src]="homeList2?.list[0]?.custom.stores.store_label" alt="">
 			<!-- <span class="font span">{{homeList2[0].custom.cate_desc}}</span> -->
 		</div>
 	</div>
@@ -109,7 +109,7 @@
 			<div class="title1"></div>
 		</div>
 		<div class="business-img font-parent">
-			<img class="img" [src]="homeList2[1].business.stores.store_label" alt="">
+			<img class="img" [src]="homeList2?.list[1]?.business.stores.store_label" alt="">
 		</div>
 	</div>
 
@@ -125,7 +125,7 @@
 		</div>
 		<div class="brand-list">
 			<ul class="clearfix">
-				<li *ngFor="let brand of homeList2[2].Brand.stores">
+				<li *ngFor="let brand of homeList2?.list[2]?.Brand.stores">
 					<img [src]="brand.store_label" alt="">
 					<p>{{brand.store_name}}</p>
 				</li>

@@ -16,8 +16,8 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
   private slideI:number = 0;   
   
   private banners:Banner[];
-  private homeList1:HomeList1[];
-  private homeList2:HomeList2[];
+  private homeList1:HomeList1;
+  private homeList2:HomeList2;
 
   private timer1;
   private timer2;
@@ -28,9 +28,9 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
 
     this.homeService.getBanner().subscribe(data=>this.banners = data);
 
-    this.homeService.getHomeList1().subscribe(data=>this.homeList1 = data);
+    this.homeService.getHomeList1().subscribe(data=>this.homeList1 = data[0]);
 
-    this.homeService.getHomeList2().subscribe(data=>this.homeList2 = data);
+    this.homeService.getHomeList2().subscribe(data=>this.homeList2 = data[0]);
 
     this.timer1 = setTimeout(function(){
       // clearInterval(this.timer1)
@@ -46,10 +46,10 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
   ngAfterViewChecked(){
     if(document.getElementById("slideFont")){
       clearInterval(this.timer2)
-      this.setTime();
+      this.setTime(); 
     }
   }
-
+  
   setTime(){
     this.timer2=setInterval(()=>{
       clearInterval(this.timer2);
