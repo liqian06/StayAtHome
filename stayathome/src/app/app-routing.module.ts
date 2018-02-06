@@ -7,6 +7,7 @@ import { FindComponent } from './find/find.component';
 import { MyComponent } from './my/my.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"layout",pathMatch:'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
   ]
 },
 {path:"login",component:LoginComponent},
-{path:"register",component:RegisterComponent}
+{path:"register",component:RegisterComponent},
+{path:"detail",component:DetailComponent}
 
 ];
 
