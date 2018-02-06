@@ -1,6 +1,10 @@
 <!-- 页面头部logo -->
 <div class="headTitle">
-	<img [src]="homeLogoImg" alt="">
+	<div>
+		<img [src]="homeLogoImg" alt="">
+		<span class="mui-icon mui-icon-camera scan" (click)="sao()"></span>
+	</div>
+
 </div>
 <!-- 页面主题部分 -->
 <div class="content">
@@ -24,9 +28,9 @@
 					</a>
 				</div> -->
 				<div class="mui-slider-item" *ngFor="let ban of banners">
-					<a href="#">
+					<a href="java:void(0)">
 						<img [src]="ban.ad_pic_links" />
-						
+
 					</a>
 					<p class="banner-p1">{{ban.ad_name}}</p>
 					<p class="banner-p2">{{ban.describe}}</p>
@@ -49,12 +53,14 @@
 
 	<!-- 吃喝玩乐 nav导航 -->
 	<div class="nav clearfix">
-			<ul class="clearfix" >
-				<li *ngFor="let nav of homeList1?.list[0]?.store_class">
+		<ul class="clearfix">
+			<li *ngFor="let nav of homeList1?.list[0]?.store_class">
+				<a [routerLink]="['/detail']">
 					<img [src]="nav.CateImageUrl" alt="">
 					<p>{{nav.cate_name}}</p>
-				</li>
-			</ul>
+				</a>
+			</li>
+		</ul>
 	</div>
 
 	<!-- 允典头条 -->
@@ -77,8 +83,10 @@
 			<div class="title1"></div>
 		</div>
 		<div class="hotTopic-img font-parent" *ngFor="let hot of homeList1?.list[2]?.hotTopic">
-			<img [src]="hot.tag_icon" alt="">
-			<span class="font"># {{hot.tag_name}} #</span>
+			<a [routerLink]="['/detail']">
+				<img [src]="hot.tag_icon" alt="">
+				<span class="font"># {{hot.tag_name}} #</span>
+			</a>
 		</div>
 	</div>
 
@@ -93,8 +101,10 @@
 			<div class="title1"></div>
 		</div>
 		<div class="custom-img font-parent">
-			<img class="img" [src]="homeList2?.list[0]?.custom.stores.store_label" alt="">
-			<!-- <span class="font span">{{homeList2[0].custom.cate_desc}}</span> -->
+			<a [routerLink]="['/detail']">
+				<img class="img" [src]="homeList2?.list[0]?.custom.stores.store_label" alt="">
+				<!-- <span class="font span">{{homeList2[0].custom.cate_desc}}</span> -->
+			</a>
 		</div>
 	</div>
 
@@ -109,7 +119,9 @@
 			<div class="title1"></div>
 		</div>
 		<div class="business-img font-parent">
-			<img class="img" [src]="homeList2?.list[1]?.business.stores.store_label" alt="">
+			<a [routerLink]="['/detail']">
+				<img class="img" [src]="homeList2?.list[1]?.business.stores.store_label" alt="">
+			</a>
 		</div>
 	</div>
 
@@ -126,8 +138,10 @@
 		<div class="brand-list">
 			<ul class="clearfix">
 				<li *ngFor="let brand of homeList2?.list[2]?.Brand.stores">
-					<img [src]="brand.store_label" alt="">
-					<p>{{brand.store_name}}</p>
+					<a [routerLink]="['/detail']">
+						<img [src]="brand.store_label" alt="">
+						<p>{{brand.store_name}}</p>
+					</a>
 				</li>
 			</ul>
 		</div>
