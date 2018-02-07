@@ -15,11 +15,8 @@ import { HomeService } from './service/home.service';
 import { LoginComponent } from './login/login.component';
 import { FindService } from './service/find.service';
 import { RegisterComponent } from './register/register.component';
-<<<<<<< HEAD
 import { LoginService } from './service/login.service';
-=======
 import { DetailComponent } from './detail/detail.component';
->>>>>>> 5630ebce09adcbde1100cf15a601fb4739429045
 
 
 @NgModule({
