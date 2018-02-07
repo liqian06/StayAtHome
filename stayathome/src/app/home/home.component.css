@@ -11,8 +11,19 @@
     background: white;
 }
 
+.headTitle div{
+    position: relative;
+}
+
 .headTitle img{
     height: 0.5rem;
+}
+
+.scan{
+    position: absolute;
+    right: 0.3rem;
+    top: 0;
+    font-size: 0.48rem;
 }
 
 /* 页面标题部分的样式 */

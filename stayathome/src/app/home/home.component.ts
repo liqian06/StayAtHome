@@ -5,7 +5,7 @@ import { Banner, HomeService, HomeList1, HomeList2 } from '../service/home.servi
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
+  templateUrl: './home.component.html', 
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit ,AfterViewChecked{
@@ -16,8 +16,8 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
   private slideI:number = 0;   
   
   private banners:Banner[];
-  private homeList1:HomeList1[];
-  private homeList2:HomeList2[];
+  private homeList1:HomeList1;
+  private homeList2:HomeList2;
 
   private timer1;
   private timer2;
@@ -28,9 +28,9 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
 
     this.homeService.getBanner().subscribe(data=>this.banners = data);
 
-    this.homeService.getHomeList1().subscribe(data=>this.homeList1 = data);
+    this.homeService.getHomeList1().subscribe(data=>this.homeList1 = data[0]);
 
-    this.homeService.getHomeList2().subscribe(data=>this.homeList2 = data);
+    this.homeService.getHomeList2().subscribe(data=>this.homeList2 = data[0]);
 
     this.timer1 = setTimeout(function(){
       // clearInterval(this.timer1)
@@ -39,17 +39,27 @@ export class HomeComponent implements OnInit ,AfterViewChecked{
         interval:0//自动轮播周期，若为0则不自动播放，默认为0；
       });
     },300)
+  }
 
-    
+  sao(){
+    console.log("点击了扫一扫")
+    // var scan = null;
+    // console.log(document)
+    // document.addEventListener("plusready",plusready,false);
+    // function plusready(){ 
+    //   console.log(123) 
+    //   scan = new plus.barcode.Barcode("box");
+    //   scan.start();
+    // }
   }
 
   ngAfterViewChecked(){
     if(document.getElementById("slideFont")){
       clearInterval(this.timer2)
-      this.setTime();
+      this.setTime(); 
     }
   }
-
+  
   setTime(){
     this.timer2=setInterval(()=>{
       clearInterval(this.timer2);
