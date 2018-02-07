@@ -28,12 +28,17 @@ export class FindComponent implements OnInit {
         console.log(this.getAttribute('data-index'))
         this.dataIndex = this.getAttribute('data-index');
         console.log(this.dataIndex)
-      });
+
+      
+      });   
+         
     })
     this.findService.getDataList().subscribe(data=>this.dataList = data[0]);
     this.dataIndex = mui(".mui-control-item.mui-active")[0].getAttribute("data-index");
     // this.muiControlContent = mui(".mui-control-item");
     // console.log(this.muiControlContent)
+
+    
 }
 
 

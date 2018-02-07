@@ -15,6 +15,7 @@ import { HomeService } from './service/home.service';
 import { LoginComponent } from './login/login.component';
 import { FindService } from './service/find.service';
 import { RegisterComponent } from './register/register.component';
+import { LoginService } from './service/login.service';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { RegisterComponent } from './register/register.component';
   ],
   providers: [
     HomeService,
-    FindService
+    FindService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

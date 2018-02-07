@@ -8,18 +8,18 @@
 </div>
 
 <div class="lg-content">
-    <form class="mui-input-group">
+    <form class="mui-input-group"  [formGroup]="formModel" (submit)="formSubmit()">
         <div class="mui-input-row">
             <label><span class="mui-icon mui-icon-person col"></span></label>
-            <input type="text" class="mui-input-clear" placeholder="手机号">
+            <input type="text" class="mui-input-clear" placeholder="手机号" formControlName="usertel">
            
         </div>
         <div class="mui-input-row">
             <label><span class="mui-icon mui-icon-locked col"></span></label>
-            <input type="password" class="mui-input-password" placeholder="密码">
+            <input type="password" class="mui-input-password" placeholder="密码" formControlName="userpwd">
         </div>
         <div class="mui-button-row">
-            <button type="button" class="mui-btn mui-btn-danger">登录</button>
+            <button type="submit" class="mui-btn mui-btn-danger">登录</button>
         </div>
     </form>
 </div>
