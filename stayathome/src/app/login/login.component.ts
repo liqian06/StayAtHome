@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
             });
 
         } else {
-          $.toast('密码格式错误', { duration: '1000', type: 'div' })
+          $.toast('请输入密码', { duration: '1000', type: 'div' })
         }
       } else {
         $.toast('手机号格式错误', { duration: '1000', type: 'div' })
