@@ -1,20 +1,30 @@
-<nav class="mui-bar mui-bar-tab">
-		<a [routerLink]="['./home']" class="mui-tab-item mui-active">
+
+	<!-- <div class="foot">
+		<a [routerLink]="['./home']" routerLinkActive="active">
 			<span class="mui-icon mui-icon-home "></span>
 			<span class="mui-tab-label">首页</span>
 		</a>
-		<a [routerLink]="['./eat']" class="mui-tab-item">
+		<a [routerLink]="['./eat']" routerLinkActive="active">
 			<span class="mui-icon mui-icon-pengyouquan "></span>
 			<span class="mui-tab-label">白吃百喝</span>
-    </a>
-    <a [routerLink]="['./find']" class="mui-tab-item">
-        <span class="mui-icon mui-icon-navigate "></span>
-        <span class="mui-tab-label">发现</span>
-    </a>
-		<a [routerLink]="['./my']" class="mui-tab-item">
+		</a>
+		<a [routerLink]="['./find']" routerLinkActive="active">
+			<span class="mui-icon mui-icon-navigate "></span>
+			<span class="mui-tab-label">发现</span>
+		</a>
+		<a [routerLink]="['./my']" routerLinkActive="active">
 			<span class="mui-icon mui-icon-contact "></span>
 			<span class="mui-tab-label">我的</span>
 		</a>
-  </nav>
-  
-  <router-outlet></router-outlet>
+
+	</div> -->
+
+
+<div class="foot">
+	<a [routerLink]="['./home']"  routerLinkActive="active"><i class="iconfont icon-weibiaoti1"></i> <p>首页</p></a>
+	<a [routerLink]="['./eat']" routerLinkActive="active"><i class="iconfont icon-chifan2600"></i> <p>白吃白喝</p></a>
+	<a [routerLink]="['./find']" routerLinkActive="active" ><i class="iconfont icon-faxianshebei"></i> <p>发现</p></a>
+	<a [routerLink]="['./my']" routerLinkActive="active" ><i class="iconfont icon-wode"></i> <p>我的</p></a>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-.mui-bar.mui-bar-tab{
+/* .mui-bar.mui-bar-tab{
     background-color: #f9f9f9;
     height: 0.82rem;
     -webkit-box-shadow:none;
@@ -8,4 +8,46 @@
 }
 .mui-bar-tab .mui-tab-item.mui-active{
     color: #ff524c;
+} */
+.foot{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: .9rem;
+    display: flex;
+    background: #fff;
+    z-index: 100;
+}
+.foot a{
+    flex: 1;
+    color: #cccccc;
+}
+.foot p{
+    text-align: center;
+    line-height: .4rem;
+    height: .4rem;
+}
+.foot i{
+    text-align: center;
+    line-height: .5rem;
+    padding-top:.05rem;
+    height: .5rem;
+    display: block;
+
+}
+.foot .active{
+    color: #ff524c;
+}
+.foot .active p{
+    color: #ff524c;
+}
+.iconfont{
+    display: block;
+    text-overflow: ellipsis;
+    font-size:.35rem;
+    text-align: center;
+}
+.icon-chifan2600{
+    font-size: 30px;
 }

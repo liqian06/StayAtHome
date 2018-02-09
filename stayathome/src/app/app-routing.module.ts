@@ -8,7 +8,7 @@ import { MyComponent } from './my/my.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DetailComponent } from './detail/detail.component';
-
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 const routes: Routes = [
   {path:"",redirectTo:"layout",pathMatch:'full'},
   {path:"layout",component:LayoutComponent,
@@ -28,6 +28,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}]
 })
 export class AppRoutingModule { }
