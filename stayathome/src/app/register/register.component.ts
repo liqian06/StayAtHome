@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute,Router } from '@angular/router'; 
+import { Router } from '@angular/router'; 
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { LoginService } from '../service/login.service';
 import { mobileValidators } from '../validators/validators';
@@ -12,7 +12,7 @@ import { mobileValidators } from '../validators/validators';
 export class RegisterComponent implements OnInit {
   
   formModel: FormGroup;
-  constructor(fb: FormBuilder, private loginService:LoginService) {
+  constructor(fb: FormBuilder, private loginService:LoginService, private router:Router) {
     this.formModel = fb.group({
       usertel: ["", [mobileValidators, Validators.required]],
       userpwd: ["", Validators.required],
@@ -58,7 +58,7 @@ export class RegisterComponent implements OnInit {
                 $.toast(data.msg, { duration: '800', type: 'div' })
                 if(data.code == 1){
                   window.localStorage.setItem("usertel",this.formModel.value["usertel"])
-                  window.location.href="/layout/my";
+                  this.router.navigate(["/layout/my"]);
                 }
               });
           }else{
